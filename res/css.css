@@ -1,0 +1,80 @@
+@font-face {
+  font-family: brandon-grotesque;
+  src: url(/res/font/brandon-grotesque-black-58a8a3e824392.otf);
+}
+
+p{
+  margin:0;
+  color: white;
+}
+
+body{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: brandon-grotesque;
+}
+.section {
+  background: green;
+  height: 30%;
+  width: 100%;
+  position: relative;
+}
+.firstSection{
+  height: 100%;
+  background: #121212;
+  font-size: 7em;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.ball img{
+  width: 400px;
+  height: 400px;
+}
+
+.ball {
+  position: absolute;
+  top: 60%;
+  left: calc(25% + 1256px);
+}
+
+.firstLine{
+  position: absolute;
+  top: calc(60% + 400px);
+  width: 65%;
+  left: calc(25% + 195px);
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+}
+
+.drop {
+  animation: drop 5s forwards; /*, ballFall 6s cubic-bezier(1,.01,1,1); */
+}
+
+@keyframes drop {
+  20% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+      -webkit-transform: rotate(-360deg);
+              transform: rotate(-360deg);
+              left: 25%;
+  }
+}
+
+@keyframes ballFall {
+  90% {
+    top: 30%;
+    }
+  99% {
+    top: 25000px;
+    display: block;
+  }
+  100%{
+    display: none;
+  }
+}
