@@ -81,8 +81,31 @@ body{
   animation: drop 5s forwards; /*, ballFall 6s cubic-bezier(1,.01,1,1); */
 }
 
+.mottoBiContainer{
+  width: 100vw;
+}
+
 .mottoContainer {
   animation: move 1s ease-out;
+}
+
+.motto1{
+  animation: moveFaster 1s linear;
+}
+.motto2{
+  animation: moveFaster 1.2s linear;
+}
+.motto3{
+  animation: moveFaster 1.4s linear;
+}
+.motto4{
+  animation: moveFaster 1.5s ease-in;
+}
+.motto5{
+  animation: moveFaster 1.7s linear;
+}
+.motto6{
+  animation: moveFaster 1.9s ease-out;
 }
 
 @keyframes drop {
@@ -95,6 +118,15 @@ body{
       -webkit-transform: rotate(-360deg);
               transform: rotate(-360deg);
               left: 25%;
+  }
+}
+
+@keyframes moveFaster {
+  0% {
+    margin-left: 3vh;
+  }
+  100% {
+    margin-left: 0vw;
   }
 }
 
