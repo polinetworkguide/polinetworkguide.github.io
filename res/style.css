@@ -14,37 +14,40 @@ body{
   margin: 0;
   font-family: brandon-grotesque;
 }
+
 .section {
   background: green;
-  height: 30%;
+  height: 30vh;
   width: 100%;
   position: relative;
 }
 .firstSection{
-  height: 100%;
+  height: 100vh;
   background: #121212;
-  font-size: 7em;
+  font-size: 3em;
   width: 100%;
   max-width: 100%;
   overflow: hidden;
 }
 
 .ball img{
-  width: 400px;
-  height: 400px;
+  width: 3em;
+  height: 3em;
 }
 
 .ball {
   position: absolute;
   top: 60%;
-  left: calc(25% + 1256px);
+  left: calc(25% + 3.14*3em);
+  width: 3em;
+  height: 3em;
 }
 
 .firstLine{
   position: absolute;
-  top: calc(60% + 400px);
+  top: calc(60% + 3em);
   width: 65%;
-  left: calc(25% + 195px);
+  left: calc(25% + 3em / 2 - 5px);
   height: 4px;
   background: white;
   border-radius: 2px;
