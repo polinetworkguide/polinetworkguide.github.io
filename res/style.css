@@ -20,31 +20,16 @@ body{
   font-family: brandon-grotesque;
 }
 
-.mottoContainer{
-  color: white;
-  font-size: 7vw;
-  font-family: brandon-grotesque-light;
-  margin-top: 10vh;
-  margin-left: 10vw;
-}
-
-.mottoBiContainer{
-}
-
-.mottoText{
-  display: inline-block;
-}
-
-.mottoText{
-
-}
-
 .section {
   background: green;
   height: 30vh;
   width: 100%;
   position: relative;
 }
+
+/* SECTION ONE */
+
+
 .firstSection{
   height: 100vh;
   background: #121212;
@@ -54,6 +39,19 @@ body{
   overflow: hidden;
 }
 
+
+.section1logo{
+  position: relative;
+}
+
+.section1motto{
+  position: relative;
+}
+
+.section1animation{
+  position: relative;
+}
+
 .ball img{
   width: 3em;
   height: 3em;
@@ -61,7 +59,6 @@ body{
 
 .ball {
   position: absolute;
-  top: 60%;
   left: calc(25% + 3.14*3em);
   width: 3em;
   height: 3em;
@@ -69,7 +66,7 @@ body{
 
 .firstLine{
   position: absolute;
-  top: calc(60% + 3em);
+  top: 3em;
   width: 65%;
   left: calc(25% + 3em / 2 - 5px);
   height: 4px;
@@ -79,6 +76,20 @@ body{
 
 .drop {
   animation: drop 5s forwards; /*, ballFall 6s cubic-bezier(1,.01,1,1); */
+}
+
+
+.mottoContainer{
+  color: white;
+  font-size: 7vw;
+  font-family: brandon-grotesque-light;
+  margin-top: 10vh;
+  margin-left: 10vw;
+  margin-bottom: 8vh;
+}
+
+.mottoText{
+  display: inline-block;
 }
 
 .mottoBiContainer{
@@ -150,4 +161,44 @@ body{
   100%{
     display: none;
   }
+}
+
+/* SECTION TWO */
+
+
+.secondSection{
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.secondSectionContainer{
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  min-width: calc(5* 100vw);
+  position: absolute;
+}
+
+.s2faces{
+  height: 100vh;
+  font-size: 12vw;
+  width: 100%;
+  position: relative;
+}
+.s2face1{
+  background: #232323;
+}
+.s2face2{
+  background: #454545;
+}
+.s2face3{
+  background: #232323;
+}
+.s2face4{
+  background: #454545;
+}
+.s2face5{
+  background: #232323;
 }

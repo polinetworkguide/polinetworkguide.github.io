@@ -7,28 +7,50 @@
 </head>
 <body>
 <div class="section firstSection">
-  <p>POLINETWORK'S</p>
-  <p>GUIDE to POLINETWORK</p>
-  <div><div class="firstLine"></div></div>
-  <div class="ball drop ballFall"> <img src="./res/images/polinetwork.png" alt="PoliNetwork"> </div>
-  <div class="mottoContainer">
-    <div class="mottoBiContainer">
-    <div class="motto1 mottoText">Il</div>
-    <div class="motto2 mottoText">Network</div>
+  <div class="section1logo">
+    <p>POLINETWORK'S</p>
+    <p>GUIDE to POLINETWORK</p>
+  </div>
+  <div class="section1motto">
+    <div class="mottoContainer">
+      <div class="mottoBiContainer">
+      <div class="motto1 mottoText">Il</div>
+      <div class="motto2 mottoText">Network</div>
+      </div>
+      <div class="mottoBiContainer">
+      <div class="motto3 mottoText">degli</div>
+      <div class="motto4 mottoText">studenti</div>
+      </div>
+      <div class="mottoBiContainer">
+      <div class="motto5 mottoText">del</div>
+      <div class="motto6 mottoText">Politecnico</div>
+      </div>
     </div>
-    <div class="mottoBiContainer">
-    <div class="motto3 mottoText">degli</div>
-    <div class="motto4 mottoText">studenti</div>
-    </div>
-    <div class="mottoBiContainer">
-    <div class="motto5 mottoText">del</div>
-    <div class="motto6 mottoText">Politecnico</div>
-    </div>
+  </div>
+  <div class="section1animation">
+    <div class="ball drop ballFall"> <img src="./res/images/polinetwork.png" alt="PoliNetwork"> </div>
+    <div><div class="firstLine"></div></div>
   </div>
 </div>
 <div class="section secondSection">
+  <div class="secondSectionContainer">
+    <div class="s2faces s2face1">SCRITTA UNO</div>
+    <div class="s2faces s2face2">SCRITTA DUE</div>
+    <div class="s2faces s2face3">SCRITTA TRE</div>
+    <div class="s2faces s2face4">SCRITTA QUATTRO</div>
+    <div class="s2faces s2face5">SCRITTA CINQUE</div>
+  </div>
 </div>
 <div class="section ThirdSection">
 </div>
 </body>
 </html>
+
+<script>
+.s2face1 { transform: rotateX(calc(0deg + var(--scrollvaluever))) rotateY(calc(0deg + var(--scrollvaluehor))) rotateZ(var(--scrollvaluehorsecond)) translateZ(var(--lunghezzalatomezzi)); }
+.s2face1 { transform: rotateX(calc(90deg + var(--scrollvaluever))) rotateY(calc(90deg)) rotateX(var(--scrollvaluehor)) rotateY(calc(var(--scrollvaluehorsecond))) translateZ(var(--lunghezzalatomezzi)); }
+.s2face1 { transform: rotateX(calc(0deg + var(--scrollvaluever))) rotateY(calc(180deg + var(--scrollvaluehor))) rotateZ(calc(0deg - var(--scrollvaluehorsecond))) translateZ(var(--lunghezzalatomezzi)); }
+.s2face1 { transform: rotateX(calc(0deg + var(--scrollvaluever))) rotateY(calc(-90deg + var(--scrollvaluehor))) rotateX(calc(var(--scrollvaluehorsecond))) translateZ(var(--lunghezzalatomezzi)); }
+.s2face1 { transform: rotateY(calc(0deg + var(--scrollvaluehor) + var(--scrollvaluehorsecond))) rotateX(calc(90deg - var(--scrollvaluever))) translateZ(var(--lunghezzalatomezzi)); }
+.s2face1 { transform: rotateY(calc(180deg + var(--scrollvaluehor) + var(--scrollvaluehorsecond))) rotateX(calc(-90deg + var(--scrollvaluever))) translateZ(var(--lunghezzalatomezzi)); }
+</script>
