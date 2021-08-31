@@ -72,7 +72,8 @@ window.onscroll = function() {
     if(document.documentElement.scrollTop >= vh(100)){
       status = 1;
       hideSections();
-      document.documentElement.scrollTop = 2;
+      //document.documentElement.scrollTop = 2;
+      window.scrollTo(0, 2, "smooth");
     }
   }
   if(status == 1){
@@ -84,7 +85,8 @@ window.onscroll = function() {
     if(document.documentElement.scrollTop <= 1){
       status = 0;
       showSections();
-      document.documentElement.scrollTop = vh(100) - 1;
+      window.scrollTo(0, vh(100) - 1, "smooth");
+      //document.documentElement.scrollTop = vh(100) - 1;
     }
   }
   if(status == 2){
