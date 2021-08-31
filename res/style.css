@@ -4,7 +4,7 @@
 }
 
 .sectionRotation{
-  height: calc(360px * 6 - 72px * 6);
+  height: calc(200vh);
   width: 100%;
 }
 
@@ -196,8 +196,10 @@ body{
   overflow: hidden;
   height: 100%;
   background-color: grey;
-  position: -webkit-sticky;
-  position: sticky;
+}
+
+.secondSectionFixed{
+  position: fixed;
   top:0;
 }
 

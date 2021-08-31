@@ -32,7 +32,7 @@
     <div><div class="firstLine"></div></div>
   </div>
 </div>
-<div class="section secondSection">
+<div class="section secondSection" id="secondSection">
   <div class="scene">
     <div class="prism">
       <div class="prism__face prism__face--1">face--1</div>
@@ -58,27 +58,33 @@ function showSections(){
   for (var i = 0; i < sectionDisappearing.length; i++) {
     sectionDisappearing[i].classList.remove("sectionNone");
     document.getElementById("sectionRotation").classList.add("sectionNone");
+    document.getElementById("secondSection").classList.remove("secondSectionFixed");
   }
 }
 function hideSections(){
   for (var i = 0; i < sectionDisappearing.length; i++) {
     sectionDisappearing[i].classList.add("sectionNone");
     document.getElementById("sectionRotation").classList.remove("sectionNone");
+    document.getElementById("secondSection").classList.add("secondSectionFixed");
   }
 }
 
 window.onscroll = function() {
-  if(status == 0){
-    if(document.documentElement.scrollTop >= vh(100)){
-      status = 1;
-      hideSections();
-      //document.documentElement.scrollTop = 2;
-      window.scrollTo(0, 2, "smooth");
+  console.log(document.documentElement.scrollTop + " - " + status);
+  switch(status) {
+  case 0:
+    if(status == 0){
+      if(document.documentElement.scrollTop >= vh(100)){
+        status = 1;
+        hideSections();
+        //document.documentElement.scrollTop = 2;
+        window.scrollTo(0, 2, "smooth");
+      }
     }
-  }
-  if(status == 1){
-    document.documentElement.style.setProperty('--rotation', document.documentElement.scrollTop/6 + "deg");
-    if(document.documentElement.scrollTop >= 1728){
+    break;
+  case 1:
+    document.documentElement.style.setProperty('--rotation', ((document.documentElement.scrollTop)/(vh(100)))*288 + "deg");
+    if(document.documentElement.scrollTop/vh(100) >= 1){
       status = 2;
       showSections();
     }
@@ -88,11 +94,12 @@ window.onscroll = function() {
       window.scrollTo(0, vh(100) - 1, "smooth");
       //document.documentElement.scrollTop = vh(100) - 1;
     }
-  }
-  if(status == 2){
+    break;
+  case 2:
     if(document.documentElement.scrollTop <= vh(100)){
       status = 0;
     }
+    break;
   }
   scroll()
 };
