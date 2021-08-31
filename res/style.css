@@ -1,3 +1,21 @@
+:root{
+  --rotation: 0deg;
+  --zvalue: 100px;
+}
+
+.sectionRotation{
+  height: calc(360px * 6 - 72px * 6);
+  width: 100%;
+}
+
+.sectionNone{
+  display: none;
+}
+
+.section{
+  transition: 0.5s;
+}
+
 @font-face {
   font-family: brandon-grotesque;
   src: url(./font/brandon-grotesque-black-58a8a3e824392.otf);
@@ -170,35 +188,35 @@ body{
   width: 100%;
   overflow: hidden;
   height: 100vh;
+  background-color: grey;
+  position: -webkit-sticky;
+  position: sticky;
+  top:0;
 }
 
-.secondSectionContainer{
+.scene {
+  width: 100vw;
   height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  min-width: calc(5* 100vw);
-  position: absolute;
+  perspective: 600px;
 }
 
-.s2faces{
-  height: 100vh;
-  font-size: 12vw;
+.prism {
   width: 100%;
+  height: 100%;
   position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px) rotateY(var(--rotation));
 }
-.s2face1{
-  background: #232323;
+
+.prism__face {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
 }
-.s2face2{
-  background: #454545;
-}
-.s2face3{
-  background: #232323;
-}
-.s2face4{
-  background: #454545;
-}
-.s2face5{
-  background: #232323;
-}
+
+.prism__face--1  { transform: rotateY(  0deg) translateZ(100px); }
+.prism__face--2  { transform: rotateY( 72deg) translateZ(100px); }
+.prism__face--3   { transform: rotateY(144deg) translateZ(100px); }
+.prism__face--4   { transform: rotateY(216deg) translateZ(100px); }
+.prism__face--5   { transform: rotateY(288deg) translateZ(100px); }

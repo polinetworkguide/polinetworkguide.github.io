@@ -6,7 +6,7 @@
     <link rel="stylesheet"href="./res/style.css">
 </head>
 <body>
-<div class="section firstSection">
+<div class="section sectionDisappearing firstSection">
   <div class="section1logo">
     <p>POLINETWORK'S</p>
     <p>GUIDE to POLINETWORK</p>
@@ -33,24 +33,74 @@
   </div>
 </div>
 <div class="section secondSection">
-  <div class="secondSectionContainer">
-    <div class="s2faces s2face1">SCRITTA UNO</div>
-    <div class="s2faces s2face2">SCRITTA DUE</div>
-    <div class="s2faces s2face3">SCRITTA TRE</div>
-    <div class="s2faces s2face4">SCRITTA QUATTRO</div>
-    <div class="s2faces s2face5">SCRITTA CINQUE</div>
+  <div class="scene">
+    <div class="prism">
+      <div class="prism__face prism__face--1">face--1</div>
+      <div class="prism__face prism__face--2">face--2</div>
+      <div class="prism__face prism__face--3">face--3</div>
+      <div class="prism__face prism__face--4">face--4</div>
+      <div class="prism__face prism__face--5">face--5</div>
+    </div>
   </div>
 </div>
-<div class="section ThirdSection">
+<div class="sectionRotation sectionNone" id="sectionRotation"></div>
+<div class="section sectionDisappearing ThirdSection">
 </div>
 </body>
 </html>
-
 <script>
-.s2face1 { transform: rotateX(calc(0deg + var(--scrollvaluever))) rotateY(calc(0deg + var(--scrollvaluehor))) rotateZ(var(--scrollvaluehorsecond)) translateZ(var(--lunghezzalatomezzi)); }
-.s2face1 { transform: rotateX(calc(90deg + var(--scrollvaluever))) rotateY(calc(90deg)) rotateX(var(--scrollvaluehor)) rotateY(calc(var(--scrollvaluehorsecond))) translateZ(var(--lunghezzalatomezzi)); }
-.s2face1 { transform: rotateX(calc(0deg + var(--scrollvaluever))) rotateY(calc(180deg + var(--scrollvaluehor))) rotateZ(calc(0deg - var(--scrollvaluehorsecond))) translateZ(var(--lunghezzalatomezzi)); }
-.s2face1 { transform: rotateX(calc(0deg + var(--scrollvaluever))) rotateY(calc(-90deg + var(--scrollvaluehor))) rotateX(calc(var(--scrollvaluehorsecond))) translateZ(var(--lunghezzalatomezzi)); }
-.s2face1 { transform: rotateY(calc(0deg + var(--scrollvaluehor) + var(--scrollvaluehorsecond))) rotateX(calc(90deg - var(--scrollvaluever))) translateZ(var(--lunghezzalatomezzi)); }
-.s2face1 { transform: rotateY(calc(180deg + var(--scrollvaluehor) + var(--scrollvaluehorsecond))) rotateX(calc(-90deg + var(--scrollvaluever))) translateZ(var(--lunghezzalatomezzi)); }
+
+let sectionDisappearing = document.getElementsByClassName("sectionDisappearing");
+
+let status = 0;
+
+function showSections(){
+  for (var i = 0; i < sectionDisappearing.length; i++) {
+    sectionDisappearing[i].classList.remove("sectionNone");
+  }
+}
+function hideSections(){
+  for (var i = 0; i < sectionDisappearing.length; i++) {
+    sectionDisappearing[i].classList.add("sectionNone");
+  }
+}
+
+window.onscroll = function() {
+  if(status == 0){
+    if(document.documentElement.scrollTop >= vh(100)){
+      status = 1;
+      hideSections();
+      document.getElementById("sectionRotation").classList.remove("sectionNone");
+      document.documentElement.scrollTop = 1;
+    }
+  }
+  if(status == 1){
+    if(document.documentElement.scrollTop >= 1728){
+      status = 2;
+      showSections();
+    }
+    if(document.documentElement.scrollTop == 0){
+      status = 0;
+      showSections();
+      document.documentElement.scrollTop = vh(100) - 1;
+    }
+  }
+  if(status == 2){
+    if(document.documentElement.scrollTop <= vh(100)){
+      hideSections();
+    }
+  }
+  scroll()
+};
+
+function scroll() {
+    if(status == 1){
+      document.documentElement.style.setProperty('--rotation', document.documentElement.scrollTop/6 + "deg");
+    }
+  }
+
+function vh(v) {
+  var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  return (v * h) / 100;
+}
 </script>
