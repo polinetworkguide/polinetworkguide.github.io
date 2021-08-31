@@ -31,17 +31,23 @@ p{
   color: white;
 }
 
+html{
+  height: 100%;
+}
+
 body{
   width: 100%;
   padding: 0;
   margin: 0;
   font-family: brandon-grotesque;
   scroll-behavior: smooth;
+  height: 100%;
+  overflow: auto;
 }
 
 .section {
   background: green;
-  height: 30vh;
+  height: 30%;
   width: 100%;
   position: relative;
 }
@@ -50,7 +56,7 @@ body{
 
 
 .firstSection{
-  height: 100vh;
+  height: 100%;
   background: #121212;
   font-size: 12vw;
   width: 100%;
@@ -102,9 +108,9 @@ body{
   color: white;
   font-size: 7vw;
   font-family: brandon-grotesque-light;
-  margin-top: 10vh;
+  margin-top: 10%;
   margin-left: 10vw;
-  margin-bottom: 8vh;
+  margin-bottom: 8%;
 }
 
 .mottoText{
@@ -188,7 +194,7 @@ body{
 .secondSection{
   width: 100%;
   overflow: hidden;
-  height: 100vh;
+  height: 100%;
   background-color: grey;
   position: -webkit-sticky;
   position: sticky;
@@ -197,7 +203,7 @@ body{
 
 .scene {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   perspective: 600px;
 }
 
@@ -212,7 +218,7 @@ body{
 .prism__face {
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   z-index: 10;
 }
 
