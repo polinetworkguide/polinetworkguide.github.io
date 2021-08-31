@@ -57,11 +57,13 @@ let status = 0;
 function showSections(){
   for (var i = 0; i < sectionDisappearing.length; i++) {
     sectionDisappearing[i].classList.remove("sectionNone");
+    document.getElementById("sectionRotation").classList.add("sectionNone");
   }
 }
 function hideSections(){
   for (var i = 0; i < sectionDisappearing.length; i++) {
     sectionDisappearing[i].classList.add("sectionNone");
+    document.getElementById("sectionRotation").classList.remove("sectionNone");
   }
 }
 
@@ -70,11 +72,11 @@ window.onscroll = function() {
     if(document.documentElement.scrollTop >= vh(100)){
       status = 1;
       hideSections();
-      document.getElementById("sectionRotation").classList.remove("sectionNone");
       document.documentElement.scrollTop = 1;
     }
   }
   if(status == 1){
+    document.documentElement.style.setProperty('--rotation', document.documentElement.scrollTop/6 + "deg");
     if(document.documentElement.scrollTop >= 1728){
       status = 2;
       showSections();
@@ -87,17 +89,11 @@ window.onscroll = function() {
   }
   if(status == 2){
     if(document.documentElement.scrollTop <= vh(100)){
-      hideSections();
+      status = 0;
     }
   }
   scroll()
 };
-
-function scroll() {
-    if(status == 1){
-      document.documentElement.style.setProperty('--rotation', document.documentElement.scrollTop/6 + "deg");
-    }
-  }
 
 function vh(v) {
   var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
