@@ -215,7 +215,6 @@ body{
   position: relative;
   transform-style: preserve-3d;
   transform: translateZ(-100px) rotateY(var(--rotation));
-  transition: transform 0.3s;
 }
 
 .prism__face {
