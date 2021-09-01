@@ -190,13 +190,78 @@ body{
 
 /* SECTION TWO */
 
-
 .secondSection{
   width: 100%;
   overflow: hidden;
-  height: 100%;
-  background-color: grey;
+  height: calc(5*40%);
+  background-color: white;
 }
+
+
+.extra-container{
+  height: 100%;
+}
+
+.extra{
+  border: 1px solid #565656;
+  height: 100%;
+  display: flex;
+  min-width: 0;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20%;
+  display: flex;
+}
+
+.extraText{
+  margin: auto;
+  height: 20%;
+  width: 100%;
+  background: white;
+  transform: skewY(-10deg);
+  font-size: 7vw;
+  display: flex;
+}
+
+.extraTextP{
+  color: inherit;
+  margin: auto;
+}
+
+.extra1{
+  background-image: url("/res/images/sport.jpg");
+}
+.extra2{
+  background-image: url("/res/images/books.jpg");
+}
+.extra3{
+  background-image: url("/res/images/dsu.jpg");
+}
+.extra4{
+  background-image: url("/res/images/mobilità.jpg");
+}
+.extra5{
+  background-image: url("/res/images/casa.jpg");
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* OLD (CAN BE REMOVED) */
 
 .secondSectionFixed{
   position: fixed;

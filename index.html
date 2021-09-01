@@ -6,7 +6,7 @@
     <link rel="stylesheet"href="./res/style.css">
 </head>
 <body>
-<div class="section sectionDisappearing firstSection">
+<div class="section firstSection">
   <div class="section1logo">
     <p>POLINETWORK'S</p>
     <p>GUIDE to POLINETWORK</p>
@@ -32,80 +32,31 @@
     <div><div class="firstLine"></div></div>
   </div>
 </div>
-<div class="section secondSection" id="secondSection">
-  <div class="scene">
-    <div class="prism">
-      <div class="prism__face prism__face--1">face--1</div>
-      <div class="prism__face prism__face--2">face--2</div>
-      <div class="prism__face prism__face--3">face--3</div>
-      <div class="prism__face prism__face--4">face--4</div>
-      <div class="prism__face prism__face--5">face--5</div>
-    </div>
+<div class="section secondSection">
+  <div class="extra-cover"></div>
+  <div class="extra-container">
+    <div class="extra extra1"><div class="extraText extraText1"><p class="extraTextP">SPORT</p></div></div>
+    <div class="extra extra2"><div class="extraText extraText2"><p class="extraTextP">VENDITA LIBRI</p></div></div>
+    <div class="extra extra3"><div class="extraText extraText3"><p class="extraTextP">DSU</p></div></div>
+    <div class="extra extra4"><div class="extraText extraText4"><p class="extraTextP">MOBILITA' INTERNAZIONALE</p></div></div>
+    <div class="extra extra5"><div class="extraText extraText5"><p class="extraTextP">CERCA CASA</p></div></div>
   </div>
 </div>
-<div class="sectionRotation sectionNone" id="sectionRotation"></div>
-<div class="section sectionDisappearing ThirdSection">
+<div class="section ThirdSection">
 </div>
 </body>
 </html>
 <script>
-
-let sectionDisappearing = document.getElementsByClassName("sectionDisappearing");
-
-let status = 0;
-
-function showSections(){
-  for (var i = 0; i < sectionDisappearing.length; i++) {
-    sectionDisappearing[i].classList.remove("sectionNone");
-    document.getElementById("sectionRotation").classList.add("sectionNone");
-    document.getElementById("secondSection").classList.remove("secondSectionFixed");
-  }
-}
-function hideSections(){
-  for (var i = 0; i < sectionDisappearing.length; i++) {
-    sectionDisappearing[i].classList.add("sectionNone");
-    document.getElementById("sectionRotation").classList.remove("sectionNone");
-    document.getElementById("secondSection").classList.add("secondSectionFixed");
-  }
-}
-
-window.onscroll = function() {
-  console.log(document.documentElement.scrollTop + " - " + status);
-  switch(status) {
-  case 0:
-    if(status == 0){
-      if(document.documentElement.scrollTop >= vh(100)){
-        status = 1;
-        hideSections();
-        //document.documentElement.scrollTop = 2;
-        window.scrollTo(0, 2, "smooth");
-      }
-    }
-    break;
-  case 1:
-    document.documentElement.style.setProperty('--rotation', ((document.documentElement.scrollTop)/(vh(100)))*288 + "deg");
-    if(document.documentElement.scrollTop/vh(100) >= 1){
-      status = 2;
-      showSections();
-    }
-    if(document.documentElement.scrollTop <= 1){
-      status = 0;
-      showSections();
-      window.scrollTo(0, vh(100) - 1, "smooth");
-      //document.documentElement.scrollTop = vh(100) - 1;
-    }
-    break;
-  case 2:
-    if(document.documentElement.scrollTop <= vh(100)){
-      status = 0;
-    }
-    break;
-  }
-  scroll()
-};
-
-function vh(v) {
-  var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-  return (v * h) / 100;
-}
+/*
+<div class="section secondSection">
+  <div class="extra-cover"></div>
+  <div class="extra-container">
+    <div class="extra extra5"><img class="sport extraimg" src="/res/images/sport.jpg"></div>
+    <div class="extra extra1"><img class="sport extraimg" src="/res/images/books.jpg"></div>
+    <div class="extra extra2"><img class="sport extraimg" src="/res/images/casa.jpg"></div>
+    <div class="extra extra3"><img class="sport extraimg" src="/res/images/mobilità.jpg"></div>
+    <div class="extra extra4"><img class="sport extraimg" src="/res/images/dsuZ.jpg"></div>
+  </div>
+</div>
+*/
 </script>
