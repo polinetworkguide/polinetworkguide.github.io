@@ -205,22 +205,23 @@ body{
 
 .scene {
   width: 100vw;
-  height: 100%;
+  height: 120%;
   perspective: 600px;
 }
 
 .prism {
   width: 100%;
-  height: 100%;
+  height: 120%;
   position: relative;
   transform-style: preserve-3d;
   transform: translateZ(-100px) rotateY(var(--rotation));
+  transition: transform 0.3s;
 }
 
 .prism__face {
   position: absolute;
   width: 100vw;
-  height: 100%;
+  height: 120%;
   z-index: 10;
 }
 
