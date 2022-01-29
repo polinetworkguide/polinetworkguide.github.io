@@ -14,6 +14,7 @@
 
 .section{
   transition: 0.5s;
+  color: white;
 }
 
 @font-face {
@@ -28,7 +29,6 @@
 
 p{
   margin:0;
-  color: white;
 }
 
 body{
@@ -356,17 +356,40 @@ a:visited{
   padding-bottom: 100%;
 }
 
+a{
+  color: inherit;
+}
+a:active{
+  color: inherit;
+}
 
 .block1{
   background-color: #073042;
+  color: #421907;
 }
 
 .block2{
   background-color: #3ddc84;
+  color:#DC3D95;
 }
 
 .block3{
-  background-color: red;
+  background-color: #5197f4;
+}
+
+.block4{
+  background-color: #ff5b17;
+  color: #F4AE51; 
+}
+
+.block5{
+  background-color: #ffd800;
+  color: #0027FF;
+}
+
+.block6{
+  background-color: #31ccbc;
+  color: #CC3141;
 }
 
 .contentBlock{
@@ -376,14 +399,13 @@ a:visited{
   padding: 2em;
   box-sizing: border-box;
   display: grid;
-}
-
-.bigTitle a{
   -webkit-text-decoration: none;
   -moz-text-decoration: none;
   text-decoration: none;
   word-break: break-word;
-  color: #fff;
+}
+
+.bigTitle p{
   font-family: brandon-grotesque-light;
   font-size: 2em;
 }
@@ -396,14 +418,6 @@ a:visited{
 @media only screen and (min-width: 450px) and (max-width: 1001px) {
   .gridContainer{
     grid-template-columns: 1fr 1fr !important;
-  }
-  .block3::after{
-    padding-bottom: 50% !important;
-  }
-  .block3{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    height: 100%;
   }
 }
 
