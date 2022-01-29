@@ -364,8 +364,8 @@ a:active{
 }
 
 .block1{
-  background-color: #0590FA;
-  color: #E5831A;
+  background-color: #1B578C;
+  color: #D96704;
 }
 
 .block2{
@@ -376,10 +376,13 @@ a:active{
 .block3{
   background-color: #5197f4;
 }
-
+/*
+background-color: #C30034;
+  color: #00C38F; 
+  */
 .block4{
-  background-color: #ff5b17;
-  color: #F4AE51; 
+  background-color: #6600C1;
+  color: #5BC100; 
 }
 
 .block5{
