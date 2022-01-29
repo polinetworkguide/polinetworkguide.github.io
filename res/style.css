@@ -43,7 +43,6 @@ body{
 
 .section {
   background: green;
-  height: 20vh;
   width: 100%;
   position: relative;
 }
@@ -52,7 +51,7 @@ body{
 
 
 .firstSection{
-  height: 100vh;
+  height: min(12em,100vh);
   background: #121212;
   font-size: 12vw;
   width: 100%;
@@ -229,7 +228,7 @@ body{
   margin-right: auto;
 }
 
-.buttonLink:visited{
+a:visited{
   text-decoration: none;
 }
 
@@ -241,7 +240,7 @@ body{
 
 .devsite-landing-row-html{
   margin: 0 auto;
-  max-width: var(1380px, 1488px);
+  max-width: 1380px;
   padding: 16px 16px;
 }
 
@@ -269,8 +268,8 @@ body{
 
 .threeButtons{
   display: grid;
-  grid-gap: 16px;
-  grid-template-columns: 1fr;
+  grid-gap: 32px;
+  grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -280,7 +279,88 @@ body{
   display: flex;
 }
 
-.sectionAssoc{
-  height: 60vh;
-  background-color: white;
+@media only screen and (max-width: 800px) {
+  .threeButtons{
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* SECTION THREE */
+
+.sectionThree{
+  background: #121212;
+  overflow: hidden;
+}
+
+.gridContainer{
+  display: grid;
+}
+
+.square {
+  position: relative;
+  width: 100%;
+}
+
+.square::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+
+.block1{
+  background-color: #073042;
+}
+
+.block2{
+  background-color: #3ddc84;
+}
+
+.block3{
+  background-color: red;
+}
+
+.contentBlock{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  box-sizing: border-box;
+  display: grid;
+}
+
+.bigTitle a{
+  -webkit-text-decoration: none;
+  -moz-text-decoration: none;
+  text-decoration: none;
+  word-break: break-word;
+  color: #fff;
+  font-family: brandon-grotesque-light;
+  font-size: 2em;
+}
+
+.bigTitle{
+  text-align: center;
+  margin: auto;
+}
+
+@media only screen and (min-width: 450px) and (max-width: 1001px) {
+  .gridContainer{
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .block3::after{
+    padding-bottom: 50% !important;
+  }
+  .block3{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 1001px) {
+  .gridContainer{
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
 }
