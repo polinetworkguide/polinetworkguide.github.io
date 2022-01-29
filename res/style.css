@@ -188,7 +188,20 @@ body{
   }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 730px) and (max-width: 1001px) {
+  .firstSection{
+    height: 100vh;
+  }
+  .mottoContainer{
+    font-size: 5vw;
+    white-space: nowrap;
+  }
+  .firstSection{
+    font-size: 8vw !important;
+  } 
+}
+
+@media only screen and (min-width: 1001px) {
   .mottoBiContainer {
     width: 100% !important;
   }
